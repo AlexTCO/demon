@@ -1,6 +1,6 @@
 {
   "Actor": {
-    "types": ["character", "demon", "human"],
+    "types": ["character", "vampire", "ghoul", "mortal", "coterie", "vampire-da"],
     "templates": {
       "vampire-da": {
         "biography": "",
@@ -19,7 +19,7 @@
           "max": 0
         },
         "humanityLabel" : {
-          "value" : "Faith"
+          "value" : "Humanity"
         },
         "humanity": {
           "value": 0,
@@ -29,17 +29,17 @@
           "aggravated": 0,
           "superficial": 0,
           "lethal" : 0,
-          "max": 7
+          "max": 5
         },
 
         "bloodpool": {
           "full": 0,
-          "max": 10
+          "max": 5
         },
         "willpower": {
           "aggravated": 0,
           "superficial": 0,
-          "max": 10
+          "max": 5
         },
         "woundPenalties" : {
           "healthy" : {
@@ -175,11 +175,11 @@
         "virtues": {
           "conscience": {
             "value": 1,
-            "name": "VTM5E.Conscience"
+            "name": "VTM5E.Conscience/Conviction"
           },
           "selfControl": {
             "value": 1,
-            "name": "VTM5E.Conviction"
+            "name": "VTM5E.Self-Control/Instinct"
           },
           "courage": {
             "value": 1,
@@ -330,7 +330,7 @@
           "max": 0
         },
         "humanityLabel" : {
-          "value" : "Faith"
+          "value" : "Humanity"
         },
         "humanity": {
           "value": 0,
@@ -486,11 +486,11 @@
         "virtues": {
           "conscience": {
             "value": 1,
-            "name": "VTM5E.Conscience"
+            "name": "VTM5E.Conscience/Conviction"
           },
           "selfControl": {
             "value": 1,
-            "name": "VTM5E.Conviction"
+            "name": "VTM5E.Self-Control/Instinct"
           },
           "courage": {
             "value": 1,
@@ -845,7 +845,7 @@
         "value": 1
       }
     },
-    "demon": {
+    "vampire": {
       "templates": ["base", "disciplines"],
       "headers": {
         "predator": "",
@@ -864,7 +864,32 @@
         "value": 1
       }
     },
-    "human": {
+    "vampire-da": {
+      "templates": [ "disciplines", "vampire-da"],
+      "headers": {
+        "predator": "",
+        "sire": "",
+        "generation": "",
+        "bane": ""
+      },
+      "blood": {
+        "potency": 0,
+        "resonance": ""
+      },
+      "clan": {
+        "value": ""
+      },
+      "hunger": {
+        "value": 1
+      }
+    },
+    "ghoul": {
+      "templates": ["base", "disciplines"],
+      "headers": {
+        "domitor": ""
+      }
+    },
+    "mortal": {
       "templates": ["base"]
     },
     "coterie": {
